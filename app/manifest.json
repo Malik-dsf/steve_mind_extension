@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Steve Mind extension",
+  "version": "0.1.3",
+  "description": "extension faite pour les stagiaires de Steve Mind ",
+  "icons": {
+    "48": "image/logo.png",
+    "128": "image/logo.png"
+  },
+
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y",
+        "chromeos": "Ctrl+Shift+Y",
+        "linux": "Ctrl+Shift+Y"
+      }
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_icon": {
+      "48": "image/logo.png",
+      "128": "image/logo.png"
+    },
+    "default_popup": "extension.html",
+    "default_title": "Steve Mind extension"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["unlimitedStorage", "notifications"]
+}
