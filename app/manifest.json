@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Steve Mind extension",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "extension faite pour les stagiaires de Steve Mind ",
   "icons": {
     "48": "image/logo.png",
